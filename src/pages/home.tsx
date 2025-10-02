@@ -4,7 +4,7 @@ import { CalendarNextAppointment } from "../components/calendar-next-appointment
 
 
 export function Home() {
-  const progress = 55;
+  const progress = 60;
 
   return (
     <main className="mt-8 flex flex-col items-center gap-8">
