@@ -83,7 +83,7 @@ IRIS vai incentivar o Cuidador e relatar o estado do Paciente no período de pó
   <li>Scrum - Método de trabalho que facilita a execucão dos princípios ágeis (Agile) -> https://www.scrum.org/</li>
 </ol>
 
-## Watch the promo video of Ola Medico UX:
-[Screencast from 2025-05-23 17-23-53.webm](https://github.com/user-attachments/assets/a36971df-27f8-4379-a78b-7c03802c02a4)
+## Watch the promo video of Ola Medico FrontEnd:
+[<img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/24f158ae-1cb7-4570-9aa0-e4b55a6270e6" />](https://www.youtube.com/watch?v=iuUM6-giuNI)
 
 [Acesso ao repositório de Frontend no Github](https://github.com/HidekiLucas0701/FIAP-Challenge-2025-Fronted)
