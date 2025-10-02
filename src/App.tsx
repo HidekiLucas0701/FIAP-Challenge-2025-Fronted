@@ -1,33 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Header } from "./components/header"
+import { lazy, Suspense } from "react"
+import { Loading } from "./components/loading"
+import { Iris } from "./components/iris"
+import { AccessibilityButtons } from "./components/accessibility-buttons"
+import { Footer } from "./components/footer"
+
+const Home = lazy(() => import("./pages/home").then(module => ({default: module.Home})))
+const NotFound = lazy(() => import("./pages/not-found").then(module => ({default: module.NotFound})))
+const ReporteDiario  = lazy(() => import("./pages/reporte-diario").then(module => ({default: module.ReporteDiario })))
+const ReporteDiarioDetalhe  = lazy(() => import("./pages/reporte-diario-detalhe").then(module => ({default: module.ReporteDiarioDetalhe })))
+const Faq  = lazy(() => import("./pages/faq").then(module => ({default: module.Faq })))
+const About  = lazy(() => import("./pages/about").then(module => ({default: module.About })))
+const IntegrantesPage  = lazy(() => import("./pages/integrantes").then(module => ({default: module.IntegrantesPage })))
+const Contato  = lazy(() => import("./pages/contato").then(module => ({default: module.Contato })))
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AccessibilityButtons />
+      <Iris/>
+      <BrowserRouter>
+        <Suspense fallback={<Loading/>}>
+          <Routes>
+            <Route path="/" element={<Header/>}>
+              <Route index element={<Home/>}/>
+              <Route path="/reporteDiario" element={<ReporteDiario/>}></Route>
+              <Route path="/faq" element={<Faq/>}></Route>
+              <Route path="/about" element={<About/>}></Route>
+              <Route path="/reporteDiarioDetalhe/:id" element={<ReporteDiarioDetalhe />} />
+              <Route path="/integrantes" element={<IntegrantesPage />} />
+              <Route path="/contatos" element={<Contato />} />
+              <Route path="*" element={<NotFound/>}></Route>
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+      <Footer/>
     </>
   )
 }
