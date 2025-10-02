@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# FIAP-Challenge-2025 (repositório Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> [!TIP]
+> ## SUMÁRIO
+> 1. [Integrantes](https://github.com/biralavor/FIAP-Challenge-2025#1-integrantes)
+> 2. [Cliente](https://github.com/biralavor/FIAP-Challenge-2025#2-cliente)
+> 3. [Problemas](https://github.com/biralavor/FIAP-Challenge-2025#3-problemas)
+> 4. [Meta](https://github.com/biralavor/FIAP-Challenge-2025#4-meta)
+> 5. [Solução](https://github.com/biralavor/FIAP-Challenge-2025#5-solucao)
+> 6. [Milestones](https://github.com/biralavor/FIAP-Challenge-2025#6-milestones)
+> 7. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025#7-tecnologias-utilizadas)
 
-Currently, two official plugins are available:
+## 1. Integrantes
+<ol>
+  <li>RM 561728: Arthur Bezerra - https://github.com/ArthurGracianiBez</li>
+  <li>RM 565355: Lucas Hideki - https://github.com/HidekiLucas0701</li>
+  <li>RM 565463: Bira Lavor - https://github.com/biralavor</li>
+</ol>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2. Cliente
+![image](https://github.com/user-attachments/assets/c048e681-2858-4176-a6d9-0b84ebfdc954)
 
-## React Compiler
+O Instituto de Medicina Física e Reabilitação do Hospital das Clínicas, conhecido como IMREA, demonstrou que o método de teleatendimento, criado na pandemia e adotado como alternativa do método presencial, tem sofrido com 20% de absenteísmo em consultas.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O IMREA é uma instituição renomada em reabilitação, pesquisa e políticas de saúde para pessoas com deficiência física.
 
-## Expanding the ESLint configuration
+Fundado em 13 de janeiro de 1975, o IMREA oferece atendimento integral e integrado, visando o máximo de independência física e funcional para seus pacientes, utilizando recursos terapêuticos e tecnológicos de ponta.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Site Oficial do IMREA](https://redelucymontoro.org.br/site/imrea/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 3. Problemas
+Através de pesquisas de campo e de estudos de dados públicos, nosso time levantou as maiores dores do Cuidador:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Cuidadores sem orientação da prática digital;
+- Consulta online complexa para idosos;
+- Falta de dados contínuos sobre a adesão ao tratamento;
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 4. Meta
+> [!IMPORTANT]
+> - **Diminuir de 20% para 10%** de absenteísmo das teleconsultas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 5. Solução
+### Plataforma Olá Médico
+Olá Médico é a plataforma que irá acompanhar o Cuidador e o Paciente, fora do ambiente hospitalar, para facilitar a recuperação do paciente, a partir de serviços automatizados.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+O nome da plataforma é uma alusão ao antigo e conhecido serviço telefônico do Instituto do Câncer da FMUSP chamado de Alô Enfermeira
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Vamos empoderar o cuidador, em seu dia a dia, com o uso do nosso **chatbot IRIS**
+
+## 6. Milestones
+<ol>
+  <li>Reportes diários</li>
+  <li>Status do tratamento</li>
+  <li>Suporte Pré-consulta</li>
+  <li>Suporte Pós-consulta</li>
+</ol>
+
+### Reportes diários
+IRIS vai incentivar o Cuidador a responder perguntas sobre o estado de saúde atual do Paciente, desde alimentação, ingestão de água e medicamentos, relatar dores, a enviar à equipe médica uma chamada de emergência
+
+### Suporte em tempo real
+IRIS vai ajudar a configurar o dispositivo móvel, junto com o Cuidador, antes da consulta online, com testes recorrentes.
+
+### Status do tratamento
+IRIS vai incentivar o Cuidador a responder perguntas sobre o tratamento atual atrelado ao prontuário do Paciente.
+
+### Pós-consulta
+IRIS vai incentivar o Cuidador e relatar o estado do Paciente no período de pós-consulta, fazendo questionamentos sobre efemeridades contidas no último prontuário do Paciente
+
+## 7. Tecnologias Utilizadas
+<ol>
+  <li>IBM WATSONX - Chatbot do tipo assistente conversasional -> https://cloud.ibm.com/catalog/services/watsonx-assistant</li>
+  <li>Node-Red - Ferramenta low-code para conexão de fluxos entre APIs -> https://nodered.org/</li>
+  <li>Telegram - Rede social e servico de mensageria -> https://www.telegram.org</li>
+  <li>Java - Linguagem de alto nível orientada a objetos -> https://www.java.com</li>
+  <li>Python - Linguagem de alto nível de múltiplo propósito -> https://www.python.org</li>
+  <li>Oracle Data Modeler - Ferramenta de definicão de modelos lógicos, relacionais e físicos para o banco de dados -> https://www.oracle.com/databse</li>
+  <li><b>React</b> - Biblioteca JavaScript para construir interfaces de usuário (UI) componentizadas e reativas. -> https://react.dev</li>
+  <li><b>Vite</b> - Ferramenta de build para o desenvolvimento frontend moderno, focada em velocidade e performance. -> https://vitejs.dev</li>
+  <li><b>Tailwind CSS</b> - Framework de CSS do tipo <i>utility-first</i> para a estilização rápida e customizável da parte visual do site. -> https://tailwindcss.com</li>
+  <li><b>React Router DOM</b> - Biblioteca para gerenciamento de rotas e navegação em aplicações React. -> https://reactrouter.com</li>
+  <li>Agile - Conjunto de práticas e princípios que aceleram o desenvolvimento de software -> https://agilemanifesto.org/</li>
+  <li>Scrum - Método de trabalho que facilita a execucão dos princípios ágeis (Agile) -> https://www.scrum.org/</li>
+</ol>
+
+## Watch the promo video of Ola Medico UX:
+[Screencast from 2025-05-23 17-23-53.webm](https://github.com/user-attachments/assets/a36971df-27f8-4379-a78b-7c03802c02a4)
+
+[Acesso ao repositório de Frontend no Github](https://github.com/HidekiLucas0701/FIAP-Challenge-2025-Fronted)
